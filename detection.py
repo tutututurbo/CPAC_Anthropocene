@@ -32,8 +32,8 @@ for result in results:
             pos_array.append(y.item()) 
             n_of_persons+=1
             
-    client.send_message("\coord", pos_array)
-    client.send_message("\n_of_persons", int(n_of_persons))
+    client.send_message("/coord", pos_array)
+    client.send_message("/n_of_persons", int(n_of_persons))
     print(pos_array)
 
     n_of_persons = 0
