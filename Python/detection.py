@@ -2,7 +2,18 @@ from ultralytics import YOLO
 from pythonosc import udp_client
 import argparse
 
-n_of_persons = 0
+INTERPOLATION_STEP = 0.05
+
+def compute_entropy_level(old, new):
+    if old == new:
+        return new
+    elif new>old:
+        return old + INTERPOLATION_STEP
+    else:
+        return old - INTERPOLATION_STEP
+
+n_old = 0
+n_new = 0
 pos_array = []
 
 # Load a model
@@ -30,11 +41,13 @@ for result in results:
             y = (y1 + y2) / 2
             pos_array.append(x.item())  
             pos_array.append(y.item()) 
-            n_of_persons+=1
             
+            n_new+=1
+            
+    entropy_level = compute_entropy_level(new=n_new, old=n_old)
     client.send_message("/coord", pos_array)
-    client.send_message("/n_of_persons", int(n_of_persons))
-    print(pos_array)
+    client.send_message("/entropy_level", float(entropy_level))
 
-    n_of_persons = 0
+    n_old = entropy_level
+    n_new = 0
     pos_array = []
