@@ -25,13 +25,16 @@ client = udp_client.SimpleUDPClient(args.ip, args.port)
 for result in results:
     for box in result.boxes:
         if int(box.cls.item()) == 0:
-            n_of_persons+=1
-            x1, y1, x2, y2 = result.boxes.xyxyn[0]
+            x1, y1, x2, y2 = box.xyxyn[0]
             x = (x1 + x2) / 2
             y = (y1 + y2) / 2
+            pos_array.append(x.item())  
+            pos_array.append(y.item()) 
+            n_of_persons+=1
             
-    client.send_message("coord", (x.item(), y.item()))
-    client.send_message("n_of_persons", int(n_of_persons))
+    client.send_message("\coord", pos_array)
+    client.send_message("\n_of_persons", int(n_of_persons))
+    print(pos_array)
 
     n_of_persons = 0
     pos_array = []
