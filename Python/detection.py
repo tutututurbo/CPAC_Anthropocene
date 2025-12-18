@@ -2,8 +2,9 @@ from ultralytics import YOLO
 from pythonosc import udp_client
 import argparse
 
-INTERPOLATION_STEP = 0.05
+MAX_PERSONS = 6
 
+INTERPOLATION_STEP = 0.05
 def compute_entropy_level(old, new):
     if old == new:
         return new
@@ -22,7 +23,7 @@ model = YOLO("yolo11n.pt")  # load an official model
 # Predict with the model
 results = model(source=0, stream=True, show=True)  # predict on Webcam
 
-# setup OSC communication
+# Setup OSC communication
 parser = argparse.ArgumentParser()
 parser.add_argument("--ip", default="127.0.0.1",
 help="The ip of the OSC server")
@@ -32,7 +33,7 @@ args = parser.parse_args()
 
 client = udp_client.SimpleUDPClient(args.ip, args.port)
 
-# Access the results
+# Loop on the predictions
 for result in results:
     for box in result.boxes:
         if int(box.cls.item()) == 0:
@@ -44,10 +45,22 @@ for result in results:
             
             n_new+=1
             
-    entropy_level = compute_entropy_level(new=n_new, old=n_old)
+    # Smoothing of entropy level
+    entropy_level = compute_entropy_level(new=n_new, old=n_old)   
+    entropy_level = round(entropy_level, 2) 
+    
+    # Padding of pos array
+    if len(pos_array) < MAX_PERSONS *  2:
+        pos_array.extend([-1.0] * (MAX_PERSONS *  2 - len(pos_array)))
+    else:
+        pos_array = pos_array[:MAX_PERSONS *  2]  
+        
+    # Sending OSC message  
     client.send_message("/coord", pos_array)
     client.send_message("/entropy_level", float(entropy_level))
+    print(entropy_level)
 
+    # Update state values
     n_old = entropy_level
     n_new = 0
     pos_array = []
