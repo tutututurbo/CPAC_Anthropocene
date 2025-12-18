@@ -2,7 +2,7 @@
 s.reboot;
 
 // Receiver
-NetAddr("127.0.0.1",12000);
+NetAddr("127.0.0.1",57120);
 
 // Global variable to map the number of people
 ~lastN = 0;
@@ -10,14 +10,14 @@ NetAddr("127.0.0.1",12000);
 // Where to take the sound files, directory has to be changed
 // All files are stereo by default
 (
-~soundPath = "C:/Users/HP/Downloads/ProgettoCPAC/suoni/";
+~soundPath = "/Users/emanueleturbanti/Documents/Università/CPAC_Anthropocene/Sounds/";
 ~files = [
-    "Layer_1.wav",
-    "Layer_2.wav",
-    "Layer_3.wav",
-    "Layer_4.wav",
-    "Layer_5.wav",
-	"Layer_6.wav"
+    "LAYER_1.wav",
+    "LAYER_2.wav",
+    "LAYER_3.wav",
+    "LAYER_4.wav",
+    "LAYER_5.wav",
+	"LAYER_6.wav"
 ];
 
 ~buffers = ~files.collect { |f|
@@ -88,5 +88,5 @@ OSCdef(\receiveNumber, { |msg|
         ~lastN = n;
     };
 
-}, '/n_of_persons', recvPort: 12000);
+}, '/entropy_level', recvPort: 57120);
 )

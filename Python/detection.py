@@ -33,6 +33,15 @@ args = parser.parse_args()
 
 client = udp_client.SimpleUDPClient(args.ip, args.port)
 
+parser_scd = argparse.ArgumentParser()
+parser_scd.add_argument("--ip", default="127.0.0.1",
+help="The ip of the OSC server")
+parser_scd.add_argument("--port", type=int, default=57120,
+help="The port the OSC server is listening on")
+args_scd = parser_scd.parse_args()
+
+client_scd = udp_client.SimpleUDPClient(args_scd.ip, args_scd.port)
+
 # Loop on the predictions
 for result in results:
     for box in result.boxes:
@@ -58,6 +67,9 @@ for result in results:
     # Sending OSC message  
     client.send_message("/coord", pos_array)
     client.send_message("/entropy_level", float(entropy_level))
+
+     
+    client_scd.send_message("/entropy_level", float(entropy_level))
     print(entropy_level)
 
     # Update state values
