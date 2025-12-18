@@ -7,15 +7,17 @@ NetAddr("127.0.0.1",12000);
 // Global variable to map the number of people
 ~lastN = 0;
 
-// Where to take the sound files
+// Where to take the sound files, directory has to be changed
+// All files are stereo by default
 (
-~soundPath = "C:/Users/HP/Downloads/ProgettoCPAC/";
+~soundPath = "C:/Users/HP/Downloads/ProgettoCPAC/suoni/";
 ~files = [
-    "Stickz-RiseBirdsFX1.wav",
-    "Stickz-RiseBirdsFX2.wav",
-    "citadel_datatransmission01_loop.wav",
-    "citadel_citadel_sickcore_loop5.wav",
-    "canals_windmill_wind_loop1.wav",
+    "Layer_1.wav",
+    "Layer_2.wav",
+    "Layer_3.wav",
+    "Layer_4.wav",
+    "Layer_5.wav",
+	"Layer_6.wav"
 ];
 
 ~buffers = ~files.collect { |f|
@@ -23,51 +25,67 @@ NetAddr("127.0.0.1",12000);
 };
 )
 
-// Play Buffer Synth
+// Layer Player Synth: the main idea is to play all layers
+// together and scale the amplitude of each one depending on the number
+// of people present in the room
 (
-SynthDef(\playBuf, { |buf, amp = 0.2|
+SynthDef(\layerPlayer, { |buf, amp = 0, out = 0|
     var sig;
     sig = PlayBuf.ar(
-        numChannels: BufChannels.kr(buf),
-        bufnum: buf,
-        rate: BufRateScale.kr(buf),
-        doneAction: 2
+        2,
+        buf,
+        BufRateScale.kr(buf),
+        loop: 1
     );
-    Out.ar(0, sig * amp);
+    sig = sig * Lag.kr(amp, 1.5); // fade smooth
+    Out.ar(out, sig);
 }).add;
 )
 
+// Where to locate all layers
 (
-~playNSounds = { |n|
-    n = n.clip(0, ~buffers.size); // sicurezza
-
-    ~buffers
-        .scramble
-        .keep(n)
-        .do { |buf|
-            Synth(\playBuf, [
-                \buf, buf,
-                \amp, 0.15
-            ]);
-        };
+~layers = ~buffers.collect { |buf|
+    Synth(\layerPlayer, [
+        \buf, buf,
+        \amp, 0
+    ]);
 };
 )
 
+// Update in amplitude of each layer, if n increases
+// preavious layers will go down in amplitude, if n
+// decreases volumes will go up accordingly
+(
+~updateLayers = { |n|
+    n = n.clip(0, ~layers.size);
+
+    ~layers.do { |synth, i|
+        var distance, amp;
+
+        if (i < n) {
+            distance = (n - 1) - i;
+            amp = 1 / (distance + 1);
+        } {
+            amp = 0;
+        };
+
+        synth.set(\amp, amp);
+    };
+};
+)
+
+
 // OSC Receiver
 // Takes the number of people involved and if it is different from the previous
-// iteration it triggers the function
+// iteration it triggers the function updateLayers
 (
 OSCdef(\receiveNumber, { |msg|
-    var n;
-    n = msg[1].asInteger;
+    var n = msg[1].asInteger;
 
-    // Controllo: esegui solo se il valore è cambiato
-    if (~lastN.isNil or: { n != ~lastN }) {
-        ("Ricevuto nuovo numero: " ++ n).postln;
-        ~playNSounds.(n);
-        ~lastN = n;  // aggiorna lo stato
-    } {
-        ("Numero invariato: " ++ n ++ " → nessuna azione").postln;
+    if (n != ~lastN) {
+        ("Persone: " ++ n).postln;
+        ~updateLayers.(n);
+        ~lastN = n;
     };
 
 }, '/n_of_persons', recvPort: 12000);
