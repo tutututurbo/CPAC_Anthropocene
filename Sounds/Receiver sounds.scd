@@ -28,7 +28,7 @@ NetAddr("127.0.0.1",12000);
 SynthDef(\playBuf, { |buf, amp = 0.2|
     var sig;
     sig = PlayBuf.ar(
-        numChannels: ,
+        numChannels: BufChannels.kr(buf),
         bufnum: buf,
         rate: BufRateScale.kr(buf),
         doneAction: 2
