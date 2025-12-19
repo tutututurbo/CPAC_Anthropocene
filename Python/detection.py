@@ -57,6 +57,7 @@ for result in results:
     # Smoothing of entropy level
     entropy_level = compute_entropy_level(new=n_new, old=n_old)   
     entropy_level = round(entropy_level, 2) 
+    if entropy_level > MAX_PERSONS: entropy_level = MAX_PERSONS
     
     # Padding of pos array
     if len(pos_array) < MAX_PERSONS *  2:
