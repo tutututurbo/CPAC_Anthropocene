@@ -10,14 +10,14 @@ NetAddr("127.0.0.1",57120);
 // Where to take the sound files, directory has to be changed
 // All files are stereo by default
 (
-~soundPath = "/Users/emanueleturbanti/Documents/Università/CPAC_Anthropocene/Sounds/";
+~soundPath = "C:/Users/filop/Desktop/CPaC/ANTHROPOCENE/layers/";
 ~files = [
-    "LAYER_1.wav",
-    "LAYER_2.wav",
-    "LAYER_3.wav",
-    "LAYER_4.wav",
-    "LAYER_5.wav",
-	"LAYER_6.wav"
+    "1.mp3",
+    "2.mp3",
+    "3.mp3",
+    "4.mp3",
+    "5.mp3",
+    "6.mp3"
 ];
 
 ~buffers = ~files.collect { |f|
