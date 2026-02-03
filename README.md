@@ -6,11 +6,11 @@
 ## About Us
 ### Meet Our Team
 
-<table style="width:100%; table-layout:fixed;">
+<table style="width:100%; table-layout:fixed; border-collapse: collapse;">
   <tr>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
         <h4>Matteo Di Giovanni</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @POLIMI</p>
         <p>
@@ -22,7 +22,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
         <h4>Alessandro Mancuso</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
@@ -34,7 +34,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
         <h4>Filippo Paris</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
@@ -46,7 +46,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
         <h4>Emanuele Turbanti</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @UniBo</p>
         <p>
@@ -120,14 +120,17 @@ The system relies on a distributed architecture to handle real-time generative m
 ### Visual System
 * **TouchDesigner:** Handles dynamic environmental rendering, fluid state transitions, and responsive visual morphing.
 * **Stream Diffusion (Remote):** Utilized for high-fidelity generative landscapes. Due to high computational costs, models are run on remote servers.
+* **DayDream:** A lightweight visual framework used for post-processing effects and ambient textures that bridge the gap between generative AI and real-time rendering.
 
 ### Audio Engine
 * **SuperCollider:** Generates adaptive soundscapes using procedural sound design and granular synthesis.
-* **Context-Aware:** Audio layers evolve seamlessly from organic to industrial based on system state.
+* **Reaper:** Acts as the primary Digital Audio Workstation for music composition.
 
 ### Interaction & Sensing
 * **YOLO (Ultralytics):** Camera-based presence detection and multi-participant tracking.
-* **Python & OSC:** A communication pipeline that normalizes tracking data and controls system parameters in real-time.
+* **Python:** A communication pipeline that normalizes tracking data and controls system parameters in real-time.
+* **OSC:** The low-latency network protocol used to synchronize data between Python, SuperCollider, and TouchDesigner.
+* **DMX:** Controls the physical lighting environment.
 
 
 ## Visual Preview
