@@ -17,11 +17,11 @@
       <div style="text-align:center;">
         <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Matteo Di Giovanni</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @POLIMI</p>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Telecommunication Engineering @POLIMI</p>
         <p>
-          <a href="">Mail</a> |
-          <a href="https://github.com/matteodigii" target="_blank">GitHub</a> |
-          <a href="" target="_blank">LinkedIn</a>
+          <a href="matteo.digiovanni@mail.polimi.it">Mail</a> |
+          <a href="https://github.com/matteodigii" target="_blank">GitHub</a> 
+          <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
       </div>
     </td>
@@ -31,9 +31,9 @@
         <h4>Alessandro Mancuso</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
-          <a href="">Mail</a> |
-          <a href="https://github.com/AleMancusoPOLI" target="_blank">GitHub</a> |
-          <a href="" target="_blank">LinkedIn</a>
+          <a href="alessandro2.mancuso@mail.polimi.it">Mail</a> |
+          <a href="https://github.com/AleMancusoPOLI" target="_blank">GitHub</a> 
+          <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
       </div>
     </td>
@@ -53,11 +53,11 @@
       <div style="text-align:center;">
         <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Emanuele Turbanti</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @UniBo</p>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Electrical Engineering @UniBo</p>
         <p>
-          <a href="">Mail</a> |
-          <a href="https://github.com/tutututurbo" target="_blank">GitHub</a> |
-          <a href="" target="_blank">LinkedIn</a>
+          <a href="emanuele.turbanti@mail.polimi.it">Mail</a> |
+          <a href="https://github.com/tutututurbo" target="_blank">GitHub</a> 
+          <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
       </div>
     </td>
@@ -144,7 +144,18 @@ The system relies on a distributed architecture to handle real-time generative m
 ```yaml
 dependencies:
   # Phyton
-  python: 3.12
+  python: 3.x
+  pyhtonosc
+  numpy
+  time
+  cv2
+
+  # YOLO ultralytics
+  yolo11n.pt
+  yolov8n-seg.pt
+
+  # TouchDesigner
+  DayDream API
 ```
 
 ## 🌍 Credits & Attributions
