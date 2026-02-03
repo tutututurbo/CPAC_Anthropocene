@@ -8,7 +8,7 @@
 
 <table style="width:100%; table-layout:fixed;">
   <tr>
-    <td style="width:33.33%; vertical-align:top;">
+    <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
         <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
         <h4>Matteo Di Giovanni</h4>
@@ -20,7 +20,7 @@
         </p>
       </div>
     </td>
-    <td style="width:33.33%; vertical-align:top;">
+    <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
         <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
         <h4>Alessandro Mancuso</h4>
@@ -32,7 +32,7 @@
         </p>
       </div>
     </td>
-    <td style="width:33.33%; vertical-align:top;">
+    <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
         <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
         <h4>Filippo Paris</h4>
@@ -44,7 +44,7 @@
         </p>
       </div>
     </td>
-    <td style="width:33.33%; vertical-align:top;">
+    <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
         <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
         <h4>Emanuele Turbanti</h4>
@@ -59,10 +59,11 @@
   </tr>
 </table>
 
+---
 
 ## Table of Contents
 1. 📖 [Overview](#overview)  
-2. 🎮 [The Experience](#the-experience)  
+2. ✨ [The Experience](#the-experience)  
 3. 🚀 [Installation & Setup](#installation--setup)  
 4. 🛠️ [Technology Stack](#technology-stack) 
 5. 📸 [Visual Preview](#visual-preview)  
@@ -73,29 +74,25 @@
 ## 📖 Overview
 **Anthropocene** serves as a bridge between scientific observation and cultural philosophy, manifesting as an interactive audiovisual environment that vividly reconstructs how human presence reshapes the Earth's biosphere. Envisioned as an artistic installation with a generative environment driven by real-time sensors and AI, the project forces a direct confrontation with the reality of how human presence alters and reshapes the natural environment.  
 
+## ✨ The Experience
 The user experience begins in a state of pure nature, immersing participants in pristine visuals and sounds, but as camera-based sensors track their movement, the system responds with a progressive metamorphosis: the landscape decays into urban forms and industrial noise, directly reflecting the audience's reshaping influence. This dynamic evolution is designed to foster emotional resonance and intuitive responsibility, inviting viewers to move beyond judgment and engage in deep reflection on their relationship with our world. 
 
-
-## 🎮 The Experience
-The installation simulates a living digital forest that responds to the "anthropic level" of the room.
-
 ### Phase I: Genesis (Pure Nature)
-* **Visuals:** Participants enter an enclosed space immersed in a pristine landscape. [cite_start]Organic visuals dance across surfaces.
-* **Audio:** Natural soundscapes—birdsong, wind, flowing water.
+* **Visuals:** Participants enter an enclosed space immersed in a pristine natural landscape.
+* **Audio:** Natural soundscapes—birdsong, wind, flowing water etc.
 * **State:** Untouched wilderness.
 
 ### Phase II: Colonisation (Progressive Interaction)
-* **Trigger:** Sensors detect human presence via computer vision.
-* **Metamorphosis:** The equilibrium is broken. Vegetation stiffens, and organic branches mutate into geometric shapes and artificial lights.
+* **Trigger:** Sensors detect human presence via computer vision (camera detection).
+* **Visuals:** The equilibrium is broken. Vegetation stiffens, and organic branches mutate into geometric shapes and artificial lights.
 * **Audio:** Metallic rhythms and distant engines superimpose over the wind.
 
 ### Phase III: Saturation (Urban Dominance)
-* **Trigger:** A critical threshold of visitors is surpassed.
 * **Visuals:** The digital city takes complete control. Glitches, frantic traffic, and visual pollution saturate the screens.
 * **Audio:** The soundscape collapses into auditory chaos, reflecting acoustic stress.
 
 ### Cycle: Collapse or Rebirth
-When the room empties, the structures disintegrate, allowing the forest to slowly regenerate to its initial state.
+When the room empties, the structures disintegrate littel by little, allowing the forest to slowly regenerate to its initial state.
 
 
 ## 🚀 Installation & Setup
