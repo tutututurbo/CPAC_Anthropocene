@@ -1,9 +1,64 @@
 # ANTHROPOCENE
-### An Immersive Audiovisual Simulation of Human Impact on Nature
+### An immersive audiovisual installation simulating humanity's transformative impact and the progressive erosion of the natural world.
 
-**Creative Programming and Computing 2025/26 - Politecnico di Milano**
+![Logo](images/logo.jpg)
 
-*Matteo Di Giovanni · Alessandro Mancuso · Filippo Paris · Emanuele Turbanti*
+## About Us
+### Meet Our Team
+
+<table style="width:100%; table-layout:fixed;">
+  <tr>
+    <td style="width:33.33%; vertical-align:top;">
+      <div style="text-align:center;">
+        <img src="images/Matteo.jpg" alt="Matteo Di Giovanni" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <h4>Matteo Di Giovanni</h4>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @POLIMI</p>
+        <p>
+          <a href="">Mail</a> |
+          <a href="https://github.com/matteodigii" target="_blank">GitHub</a> |
+          <a href="" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </td>
+    <td style="width:33.33%; vertical-align:top;">
+      <div style="text-align:center;">
+        <img src="images/Ale.jpg" alt="Alessandro Mancuso" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <h4>Alessandro Mancuso</h4>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
+        <p>
+          <a href="">Mail</a> |
+          <a href="https://github.com/AleMancusoPOLI" target="_blank">GitHub</a> |
+          <a href="" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </td>
+    <td style="width:33.33%; vertical-align:top;">
+      <div style="text-align:center;">
+        <img src="images/Filippo.jpg" alt="Filippo Paris" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <h4>Filippo Paris</h4>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
+        <p>
+          <a href="mailto:filippoparis.pro@gmail.com">Mail</a> |
+          <a href="https://github.com/fparismusic" target="_blank">GitHub</a> |
+          <a href="http://www.linkedin.com/in/filippoparis" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </td>
+    <td style="width:33.33%; vertical-align:top;">
+      <div style="text-align:center;">
+        <img src="images/Ema.jpg" alt="Emanuele Turbanti" style="width:200px; height:200px; border-radius:50%; object-fit:cover;">
+        <h4>Emanuele Turbanti</h4>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @UniBo</p>
+        <p>
+          <a href="">Mail</a> |
+          <a href="https://github.com/tutututurbo" target="_blank">GitHub</a> |
+          <a href="" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+
 
 ## Table of Contents
 1. 📖 [Overview](#overview)  
@@ -16,9 +71,9 @@
 ---
 
 ## 📖 Overview
-**Anthropocene** is an immersive audiovisual installation acting as an "algorithmic mirror". It defines our current era by acknowledging humanity as the primary driver of planetary-scale environmental transformation.
+**Anthropocene** serves as a bridge between scientific observation and cultural philosophy, manifesting as an interactive audiovisual environment that vividly reconstructs how human presence reshapes the Earth's biosphere. Envisioned as an artistic installation with a generative environment driven by real-time sensors and AI, the project forces a direct confrontation with the reality of how human presence alters and reshapes the natural environment.  
 
-The project bridges science and philosophy, translating abstract concepts into a visceral, embodied experience. Starting from a pristine natural landscape, the environment evolves—or devolves—in real-time based on audience presence, inviting reflection on our relationship with the ecosystem rather than assigning blame.
+The user experience begins in a state of pure nature, immersing participants in pristine visuals and sounds, but as camera-based sensors track their movement, the system responds with a progressive metamorphosis: the landscape decays into urban forms and industrial noise, directly reflecting the audience's reshaping influence. This dynamic evolution is designed to foster emotional resonance and intuitive responsibility, inviting viewers to move beyond judgment and engage in deep reflection on their relationship with our world. 
 
 
 ## 🎮 The Experience
@@ -84,4 +139,4 @@ The system relies on a distributed architecture to handle real-time generative m
 ## 📄 License & Usage Terms
 **ANTHROPOCENE © 2026 All Rights Reserved.** 
 
-This project is an academic work developed for the "Creative Programming and Computing" course at Politecnico di Milano. No part of this project may be reproduced or used for commercial purposes without explicit permission from the authors.
+This project is an academic work developed for the **Creative Programming and Computing Course A.A. 2025/26 - Politecnico di Milano**. No part of this project may be reproduced or used for commercial purposes without explicit permission from the authors.
