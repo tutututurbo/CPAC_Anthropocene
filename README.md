@@ -10,7 +10,7 @@
   <tr>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Matteo Di Giovanni</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @POLIMI</p>
         <p>
@@ -22,7 +22,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Alessandro Mancuso</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
@@ -34,7 +34,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Filippo Paris</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
@@ -46,7 +46,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Emanuele Turbanti</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @UniBo</p>
         <p>
