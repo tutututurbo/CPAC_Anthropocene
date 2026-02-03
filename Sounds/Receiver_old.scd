@@ -10,7 +10,7 @@ NetAddr("127.0.0.1",57120);
 // Where to take the sound files, directory has to be changed
 // All files are stereo by default
 (
-~soundPath = "C:/Users/filop/Desktop/CPaC/ANTHROPOCENE/layers/";
+~soundPath = "Layers/";
 ~files = [
     "1.mp3",
     "2.mp3",
