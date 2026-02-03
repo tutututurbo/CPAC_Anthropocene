@@ -1,6 +1,11 @@
 # ANTHROPOCENE
 ### An immersive audiovisual installation simulating humanity's transformative impact and the progressive erosion of the natural world.
 
+[![Stream Diffusion](https://img.shields.io/badge/Stream_Diffusion-Generative_AI-yellow?logo=huggingface&logoColor=white)](https://github.com/cumulo-autumn/StreamDiffusion)
+[![SuperCollider](https://img.shields.io/badge/SuperCollider-Synthesis-red?logo=supercollider&logoColor=black)](https://supercollider.github.io)
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/license-Academic-green)](LICENSE)
+
 ![Logo](images_readme/logo.jpg)
 
 ## About Us
@@ -62,12 +67,14 @@
 ---
 
 ## Table of Contents
-1. 📖 [Overview](#overview)  
-2. ✨ [The Experience](#the-experience)  
-3. 🚀 [Installation & Setup](#installation--setup)  
-4. 🛠️ [Technology Stack](#technology-stack) 
-5. 📸 [Visual Preview](#visual-preview)  
-6. 📄 [License & Usage Terms](#license--usage-terms)
+01. 📖 [Overview](#overview)  
+02. ✨ [The Experience](#the-experience)  
+03. 🚀 [Installation & Setup](#installation--setup)
+04. 📁 [Project Structure](#-project-structure)  
+05. 🛠️ [Technology Stack](#technology-stack)
+06. 🌍 [Credits & Attributions](#credits--attributions)
+07. 📸 [Visual Preview](#visual-preview)  
+08. 📄 [License & Usage Terms](#license--usage-terms)
 
 ---
 
@@ -112,6 +119,7 @@ When the room empties, the structures disintegrate littel by little, allowing th
     ```
 3.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
 
+## 📁 Project Structure
 
 ## 🛠️ Technology Stack
 
@@ -132,9 +140,18 @@ The system relies on a distributed architecture to handle real-time generative m
 * **OSC:** The low-latency network protocol used to synchronize data between Python, SuperCollider, and TouchDesigner.
 * **DMX:** Controls the physical lighting environment.
 
+### Key Packages
+```yaml
+dependencies:
+  # Phyton
+  python: 3.12
+```
 
-## Visual Preview
+## 🌍 Credits & Attributions
 
+## 📸 Visual Preview
+
+---
 
 ## 📄 License & Usage Terms
 **ANTHROPOCENE © 2026 All Rights Reserved.** 
