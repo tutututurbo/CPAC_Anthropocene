@@ -68,9 +68,9 @@
 
 ## Table of Contents
 01. 📖 [Overview](#-overview)
-02. ✨ [The Experience](#-the-experience)  
-03. 🚀 [Installation & Setup](#-installation--setup)
-04. 📁 [Project Structure](#-project-structure)  
+02. ✨ [The Experience](#-the-experience)
+03. 📁 [Project Structure](#-project-structure)  
+04. 🚀 [Installation & Setup](#-installation--setup)
 05. 🛠️ [Technology Stack](#-technology-stack)
 06. 🌍 [Credits & Attributions](#-credits--attributions)
 07. 📸 [Visual Preview](#-visual-preview)  
@@ -101,6 +101,21 @@ The user experience begins in a state of pure nature, immersing participants in 
 ### Cycle: Rebirth
 When the room empties, the structures disintegrate little by little, allowing the forest to slowly regenerate to its initial state.
 
+## 📁 Project Structure
+
+![Map](images_readme/Map.png)
+
+Fully realized architectural vision of Anthropocene. While the project can be scaled down for smaller demonstrations, this layout represents the optimal deployment designed for a dedicated exhibition space with sufficient resources.
+
+* **Central Console:** The "brain" of the operation (Laptop/Workstation), managing the OSC communication pipeline between vision, audio, and sensing logic.
+
+* **Immersive Visual:** A large-scale generative screen (or projection) dominates the scene, driven by TouchDesigner and Stream Diffusion.
+
+* **Spatial Audio Field:** Two active speakers (Stereo) are positioned flanking the screen. Controlled by SuperCollider, they create a stereo field that physically envelops the audience.
+
+* **Interactive Zone:** A centralized area where the audience is tracked. A standalone camera, positioned towards the crowd, feeds real-time data to the Python/YOLO controller to trigger state changes based on crowd density.
+
+* **Atmospheric Lighting:** A grid of DMX-controlled LED spots on the ceiling (or on the ground) reacts to the system's "entropy level".
 
 ## 🚀 Installation & Setup
 
@@ -119,7 +134,6 @@ When the room empties, the structures disintegrate little by little, allowing th
     ```
 3.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
 
-## 📁 Project Structure
 
 ## 🛠️ Technology Stack
 
@@ -160,6 +174,17 @@ dependencies:
 
 ## 🌍 Credits & Attributions
 
+This project was conceived and developed as part of the **Creative Programming and Computing** course (A.Y. 2025/2026) at **Politecnico di Milano**.
+
+**Core Frameworks & Libraries**
+* **Generative Visuals:** [Stream Diffusion](https://github.com/cumulo-autumn/StreamDiffusion) pipeline & [TouchDesigner](https://derivative.ca/).
+* **Audio Engine:** [SuperCollider](https://supercollider.github.io/) (Real-time synthesis) & [Reaper](https://www.reaper.fm/) (Composition).
+* **Sensing & Logic:** [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) for computer vision & `python-osc` for networking.
+
+**Acknowledgements**
+* Special thanks to the open-source community for the **DayDream** visual framework.
+* Models hosted and accelerated via **HuggingFace**.
+  
 ## 📸 Visual Preview
 
 ---
@@ -167,4 +192,4 @@ dependencies:
 ## 📄 License & Usage Terms
 **ANTHROPOCENE © 2026 All Rights Reserved.** 
 
-This project is an academic work developed for the **Creative Programming and Computing Course A.A. 2025/26 - Politecnico di Milano**. No part of this project may be reproduced or used for commercial purposes without explicit permission from the authors.
+No part of this project may be reproduced or used for commercial purposes without explicit permission from the authors.
