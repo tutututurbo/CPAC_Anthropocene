@@ -15,11 +15,11 @@
   <tr>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
+        <img src="images_readme/Matteo.jpeg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Matteo Di Giovanni</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Telecommunication Engineering @POLIMI</p>
         <p>
-          <a href="matteo.digiovanni@mail.polimi.it">Mail</a> |
+          <a href="mailto:matteo.digiovanni@mail.polimi.it">Mail</a> |
           <a href="https://github.com/matteodigii" target="_blank">GitHub</a> 
           <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
@@ -31,7 +31,7 @@
         <h4>Alessandro Mancuso</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
-          <a href="alessandro2.mancuso@mail.polimi.it">Mail</a> |
+          <a href="mailto:alessandro2.mancuso@mail.polimi.it">Mail</a> |
           <a href="https://github.com/AleMancusoPOLI" target="_blank">GitHub</a> 
           <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
@@ -55,7 +55,7 @@
         <h4>Emanuele Turbanti</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Electrical Engineering @UniBo</p>
         <p>
-          <a href="emanuele.turbanti@mail.polimi.it">Mail</a> |
+          <a href="mailto:emanuele.turbanti@mail.polimi.it">Mail</a> |
           <a href="https://github.com/tutututurbo" target="_blank">GitHub</a> 
           <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
@@ -67,14 +67,14 @@
 ---
 
 ## Table of Contents
-01. 📖 [Overview](#overview)  
-02. ✨ [The Experience](#the-experience)  
-03. 🚀 [Installation & Setup](#installation--setup)
+01. 📖 [Overview](#-overview)
+02. ✨ [The Experience](#-the-experience)  
+03. 🚀 [Installation & Setup](#-installation--setup)
 04. 📁 [Project Structure](#-project-structure)  
-05. 🛠️ [Technology Stack](#technology-stack)
-06. 🌍 [Credits & Attributions](#credits--attributions)
-07. 📸 [Visual Preview](#visual-preview)  
-08. 📄 [License & Usage Terms](#license--usage-terms)
+05. 🛠️ [Technology Stack](#-technology-stack)
+06. 🌍 [Credits & Attributions](#-credits--attributions)
+07. 📸 [Visual Preview](#-visual-preview)  
+08. 📄 [License & Usage Terms](#-license--usage-terms)
 
 ---
 
@@ -98,8 +98,8 @@ The user experience begins in a state of pure nature, immersing participants in 
 * **Visuals:** The digital city takes complete control. Glitches, frantic traffic, and visual pollution saturate the screens.
 * **Audio:** The soundscape collapses into auditory chaos, reflecting acoustic stress.
 
-### Cycle: Collapse or Rebirth
-When the room empties, the structures disintegrate littel by little, allowing the forest to slowly regenerate to its initial state.
+### Cycle: Rebirth
+When the room empties, the structures disintegrate little by little, allowing the forest to slowly regenerate to its initial state.
 
 
 ## 🚀 Installation & Setup
