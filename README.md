@@ -1,6 +1,11 @@
 # ANTHROPOCENE
 ### An immersive audiovisual installation simulating humanity's transformative impact and the progressive erosion of the natural world.
 
+[![Stream Diffusion](https://img.shields.io/badge/Stream_Diffusion-Generative_AI-yellow?logo=huggingface&logoColor=white)](https://github.com/cumulo-autumn/StreamDiffusion)
+[![SuperCollider](https://img.shields.io/badge/SuperCollider-Synthesis-red?logo=supercollider&logoColor=black)](https://supercollider.github.io)
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/license-Academic-green)](LICENSE)
+
 ![Logo](images_readme/logo.jpg)
 
 ## About Us
@@ -10,31 +15,31 @@
   <tr>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Matteo.jpg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Matteo Di Giovanni</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @POLIMI</p>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Telecommunication Engineering @POLIMI</p>
         <p>
-          <a href="">Mail</a> |
-          <a href="https://github.com/matteodigii" target="_blank">GitHub</a> |
-          <a href="" target="_blank">LinkedIn</a>
+          <a href="matteo.digiovanni@mail.polimi.it">Mail</a> |
+          <a href="https://github.com/matteodigii" target="_blank">GitHub</a> 
+          <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
       </div>
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Alessandro Mancuso</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
-          <a href="">Mail</a> |
-          <a href="https://github.com/AleMancusoPOLI" target="_blank">GitHub</a> |
-          <a href="" target="_blank">LinkedIn</a>
+          <a href="alessandro2.mancuso@mail.polimi.it">Mail</a> |
+          <a href="https://github.com/AleMancusoPOLI" target="_blank">GitHub</a> 
+          <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
       </div>
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Filippo Paris</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
@@ -46,13 +51,13 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width:200px; height:200px; max-width:200px; aspect-ratio: 1/1; border-radius:50%; object-fit:cover;">
+        <img src="images_readme/Ema.jpg" alt="Emanuele Turbanti" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Emanuele Turbanti</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in ? Engineering @UniBo</p>
+        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Electrical Engineering @UniBo</p>
         <p>
-          <a href="">Mail</a> |
-          <a href="https://github.com/tutututurbo" target="_blank">GitHub</a> |
-          <a href="" target="_blank">LinkedIn</a>
+          <a href="emanuele.turbanti@mail.polimi.it">Mail</a> |
+          <a href="https://github.com/tutututurbo" target="_blank">GitHub</a> 
+          <!--a href="" target="_blank">LinkedIn</a>-->
         </p>
       </div>
     </td>
@@ -62,12 +67,14 @@
 ---
 
 ## Table of Contents
-1. 📖 [Overview](#overview)  
-2. ✨ [The Experience](#the-experience)  
-3. 🚀 [Installation & Setup](#installation--setup)  
-4. 🛠️ [Technology Stack](#technology-stack) 
-5. 📸 [Visual Preview](#visual-preview)  
-6. 📄 [License & Usage Terms](#license--usage-terms)
+01. 📖 [Overview](#overview)  
+02. ✨ [The Experience](#the-experience)  
+03. 🚀 [Installation & Setup](#installation--setup)
+04. 📁 [Project Structure](#-project-structure)  
+05. 🛠️ [Technology Stack](#technology-stack)
+06. 🌍 [Credits & Attributions](#credits--attributions)
+07. 📸 [Visual Preview](#visual-preview)  
+08. 📄 [License & Usage Terms](#license--usage-terms)
 
 ---
 
@@ -112,6 +119,7 @@ When the room empties, the structures disintegrate littel by little, allowing th
     ```
 3.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
 
+## 📁 Project Structure
 
 ## 🛠️ Technology Stack
 
@@ -132,9 +140,29 @@ The system relies on a distributed architecture to handle real-time generative m
 * **OSC:** The low-latency network protocol used to synchronize data between Python, SuperCollider, and TouchDesigner.
 * **DMX:** Controls the physical lighting environment.
 
+### Key Packages
+```yaml
+dependencies:
+  # Phyton
+  python: 3.x
+  pyhtonosc
+  numpy
+  time
+  cv2
 
-## Visual Preview
+  # YOLO ultralytics
+  yolo11n.pt
+  yolov8n-seg.pt
 
+  # TouchDesigner
+  DayDream API
+```
+
+## 🌍 Credits & Attributions
+
+## 📸 Visual Preview
+
+---
 
 ## 📄 License & Usage Terms
 **ANTHROPOCENE © 2026 All Rights Reserved.** 
