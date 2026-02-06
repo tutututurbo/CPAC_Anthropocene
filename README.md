@@ -15,7 +15,7 @@
   <tr>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Matteo.jpeg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
+        <img src="images_readme/Matte.jpg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Matteo Di Giovanni</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Telecommunication Engineering @POLIMI</p>
         <p>
@@ -72,9 +72,12 @@
 03. 📁 [Project Structure](#-project-structure)  
 04. 🚀 [Installation & Setup](#-installation--setup)
 05. 🛠️ [Technology Stack](#-technology-stack)
-06. 🌍 [Credits & Attributions](#-credits--attributions)
-07. 📸 [Visual Preview](#-visual-preview)  
-08. 📄 [License & Usage Terms](#-license--usage-terms)
+06. 📽️ [Visual System](#-visual-system)
+07. 🔊 [Audio System](#-audio-system)
+08. 💡 [Lighting System](#-lighting-system)
+09. 🌍 [Credits & Attributions](#-credits--attributions)
+10. 📸 [Visual Preview](#-visual-preview)  
+11. 📄 [License & Usage Terms](#-license--usage-terms)
 
 ---
 
@@ -174,6 +177,10 @@ dependencies:
   # TouchDesigner
   DayDream API
 ```
+
+## 📽️ Visual System
+
+## 🔊 Audio System
 
 ## 💡 Lighting System
 
