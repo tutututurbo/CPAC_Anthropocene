@@ -135,6 +135,7 @@ Fully realized architectural vision of Anthropocene. While the project can be sc
     python detection_controller.py
     ```
 3.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
+4.  
 
 
 ## 🛠️ Technology Stack
@@ -161,7 +162,7 @@ The system relies on a distributed architecture to handle real-time generative m
 dependencies:
   # Phyton
   python: 3.x
-  pyhtonosc
+  pythonosc
   numpy
   time
   cv2
@@ -173,6 +174,10 @@ dependencies:
   # TouchDesigner
   DayDream API
 ```
+
+## 💡 Lighting System
+
+The TouchDesigner project includes a system for automatic lighting management. The installation is thought for 2 fixtures, but can be easily 
 
 ## 🌍 Credits & Attributions
 
