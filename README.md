@@ -27,7 +27,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
+        <img src="images_readme/Ale.png" alt="Alessandro Mancuso" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Alessandro Mancuso</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
