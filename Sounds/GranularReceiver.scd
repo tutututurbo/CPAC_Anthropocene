@@ -19,7 +19,8 @@ s.waitForBoot({
 	~busDry = Bus.audio(s, 2);
 
     // Buffer Audio
-    ~soundPath = "Layers/";
+
+	~soundPath = PathName(thisProcess.nowExecutingPath).parentPath ++ "Layers/";
     ~files = ["1.mp3", "2.mp3", "3.mp3", "4.mp3", "5.mp3", "6.mp3"];
 	// Safety check
     if(File.exists(~soundPath).not) { "⚠️ CARTELlA 'Layers' NON TROVATA!".warn };
