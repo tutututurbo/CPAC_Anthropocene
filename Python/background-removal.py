@@ -30,6 +30,8 @@ while True:
     ret, frame = vid.read()
     if not ret:
         break
+    
+    frame_original = frame.copy()
 
     # 1. INFERENZA
     # classes=[target_class_id] filtra solo le persone
@@ -57,9 +59,13 @@ while True:
                 # "Disegniamo" la persona in bianco (255) sulla maschera
                 cv2.fillPoly(combined_mask, [poly], 255)
 
-        # 3. APPLICAZIONE MASCHERA
-        # Mantiene il frame dove la maschera è bianca, nero altrove
-        frame = cv2.bitwise_and(frame, frame, mask=combined_mask)
+        # 3. APPLICAZIONE MASCHERA CON SFONDO BIANCO
+        # Crea uno sfondo bianco
+        white_bg = np.ones_like(frame, dtype=np.uint8) * 255
+
+        # Copia solo la persona sullo sfondo bianco
+        frame = white_bg.copy()
+        frame[combined_mask == 255] = frame_original[combined_mask == 255]
     else:
         # Nessuna persona trovata -> frame nero
         frame = np.zeros_like(frame)
