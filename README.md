@@ -123,7 +123,9 @@ Fully realized architectural vision of Anthropocene. While the project can be sc
 * **Projector:** For immersive visual output.
 * **Camera:** For presence detection (webcam or USB camera).
 * **Speakers:** For spatial audio experience.
-* **Internet Connection:** Required for remote Stream Diffusion inference.
+* **Computing Power:**
+  * **Internet connection:** Required for remote Stream Diffusion inference.
+  * **OR High-end GPU:** (e.g., NVIDIA RTX 3080 or higher) to run the model locally without an internet connection.
 
 ### Running the Project
 1.  **Audio:** Boot the **SuperCollider** server and load the `main.scd` file to start the audio engine.
@@ -164,7 +166,7 @@ dependencies:
   time
   cv2
 
-  # YOLO ultralytics
+  # YOLO ultralytics models
   yolo11n.pt
   yolov8n-seg.pt
 
