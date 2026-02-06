@@ -27,7 +27,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/Ale.jpg" alt="Alessandro Mancuso" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
+        <img src="images_readme/Ale.png" alt="Alessandro Mancuso" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Alessandro Mancuso</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
         <p>
@@ -123,7 +123,9 @@ Fully realized architectural vision of Anthropocene. While the project can be sc
 * **Projector:** For immersive visual output.
 * **Camera:** For presence detection (webcam or USB camera).
 * **Speakers:** For spatial audio experience.
-* **Internet Connection:** Required for remote Stream Diffusion inference.
+* **Computing Power:**
+  * **Internet connection:** Required for remote Stream Diffusion inference.
+  * **OR High-end GPU:** (e.g., NVIDIA RTX 3080 or higher) to run the model locally without an internet connection.
 
 ### Running the Project
 1.  **Audio:** Boot the **SuperCollider** server and load the `main.scd` file to start the audio engine.
@@ -133,6 +135,7 @@ Fully realized architectural vision of Anthropocene. While the project can be sc
     python detection_controller.py
     ```
 3.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
+4.  
 
 
 ## 🛠️ Technology Stack
@@ -159,18 +162,22 @@ The system relies on a distributed architecture to handle real-time generative m
 dependencies:
   # Phyton
   python: 3.x
-  pyhtonosc
+  pythonosc
   numpy
   time
   cv2
 
-  # YOLO ultralytics
+  # YOLO ultralytics models
   yolo11n.pt
   yolov8n-seg.pt
 
   # TouchDesigner
   DayDream API
 ```
+
+## 💡 Lighting System
+
+The TouchDesigner project includes a system for automatic lighting management. The installation is thought for 2 fixtures, but can be easily 
 
 ## 🌍 Credits & Attributions
 
