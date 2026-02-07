@@ -106,9 +106,13 @@ When the room empties, the structures disintegrate little by little, allowing th
 
 ## 📁 Project Structure
 
-![Map](images_readme/Map.png)
+<div align="center">
+  <img src="images_readme/Map.png" alt="Map" width="80%">
+  <br>
+  <em>Fully realized architectural vision of Anthropocene.</em> <br><br>
+</div>
 
-Fully realized architectural vision of Anthropocene. While the project can be scaled down for smaller demonstrations, this layout represents the optimal deployment designed for a dedicated exhibition space with sufficient resources.
+While the project can be scaled down for smaller demonstrations, this layout represents the optimal deployment designed for a dedicated exhibition space with sufficient resources.
 
 * **Central Console:** The "brain" of the operation (Laptop/Workstation), managing the OSC communication pipeline between vision, audio, and sensing logic.
 
@@ -131,15 +135,17 @@ Fully realized architectural vision of Anthropocene. While the project can be sc
   * **OR High-end GPU:** (e.g., NVIDIA RTX 3080 or higher) to run the model locally without an internet connection.
 
 ### Running the Project
-1.  **Audio:** Boot the **SuperCollider** server and load the `main.scd` file to start the audio engine.
-2.  **Sensing:** Run the **Python** controller to start the computer vision system:
+1.  **Assets & Media:**
+    * Download the image dataset and the audio samples.
+    * Place the `Layers` folder in the same directory as the SuperCollider script.
+    * Ensure the `Images` (Dataset) folder is placed in the project root for TouchDesigner access.
+2.  **Audio:** Boot the **SuperCollider** server and load the `GranularReceiver.scd` file to start the audio engine.
+3.  **Sensing:** Run the **Python** controller to start the computer vision system:
     ```bash
     pip install ultralytics python-osc
     python detection_controller.py
     ```
-3.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
-4.  
-
+4.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
 
 ## 🛠️ Technology Stack
 
@@ -163,7 +169,7 @@ The system relies on a distributed architecture to handle real-time generative m
 ### Key Packages
 ```yaml
 dependencies:
-  # Phyton
+  # Python
   python: 3.x
   pythonosc
   numpy
@@ -181,6 +187,27 @@ dependencies:
 ## 📽️ Visual System
 
 ## 🔊 Audio System
+
+The auditory experience of **Anthropocene** is driven by a custom-built generative engine developed in **SuperCollider**. Unlike traditional loop-based playback, the system employs **Real-Time Granular Synthesis** to sonically represent the erosion of the natural world.
+
+The audio engine listens for OSC messages (`/entropy_level`) from the central control unit and dynamically manipulates the soundscape through a custom synth architecture (`\texturePlayer`).
+
+<div align="center">
+  <img src="images_readme/supercollider.png" alt="SuperCollider GUI" width="80%">
+  <br>
+  <em>The custom "Entropy Engine" GUI built in SuperCollider for real-time granular control.</em>
+</div>
+
+### The Entropy Engine
+The system manages 6 distinct audio layers, morphing them based on the crowd's activity level. As the "Entropy Level" rises, the engine applies the following transformations:
+
+* **Granular Erosion:** The signal is split between a "clean" path and a "granular" path. As human presence increases, the system fragments the audio into microscopic grains (`GrainBuf`), creating a cloudy, textured, and disintegrated sound.
+* **Time Dilation:** High entropy levels trigger a time-stretching algorithm that slows down the playback speed (down to 50%) without altering the window size, creating a heavy, dragging atmosphere.
+* **Harmonic Dissonance:** A `pitchJitter` parameter is introduced at peak levels, randomly detuning the grains to generate acoustic discomfort and instability.
+* **Spatial Wash:** The signal is fed into a stereo reverb (`FreeVerb2`) whose room size and wet mix expand proportionally with the chaos, drowning the clarity of nature in a wash of industrial noise.
+
+### Technical Flow
+1.  **Input:** OSC Data (`/entropy_level`) → **Logic:** Layer blending & Parameter Mapping → **Synthesis:** Granular Texture → **FX:** Reverb & Limiting → **Output:** Stereo Field.
 
 ## 💡 Lighting System
 
