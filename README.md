@@ -51,7 +51,7 @@
     </td>
     <td style="width:25%; vertical-align:top;">
       <div style="text-align:center;">
-        <img src="images_readme/RitrattoColori.jpeg" alt="Emanuele Turbanti" style="width: 50%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
+        <img src="images_readme/RitrattoColori.jpeg" alt="Emanuele Turbanti" style="width: 30%; max-width: 200px; max-height: 200px; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
         <h4>Emanuele Turbanti</h4>
         <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Electrical Engineering @UniBo</p>
         <p>
