@@ -173,8 +173,9 @@ dependencies:
   python: 3.x
   pythonosc
   numpy
-  time
-  cv2
+  opencv
+  PyObjC (Metal)
+  Syphon [only macOS]
 
   # YOLO ultralytics models
   yolov8n-seg.pt
@@ -188,13 +189,12 @@ dependencies:
 The visual core of **Anthropocene** is a real-time generative pipeline built in **TouchDesigner**. It functions as a centralized hub that interprets sensor data and translates it into a visual metamorphosis. The system does not merely play back video; it integrates new frames in real-time based on the audience's live behavior.
 
 <div align="center">
-  <img src="images_readme/touchdesigner.jpeg" alt="TouchDesigner Network" width="100%">
+  <img src="images_readme/touchdesigner.jpeg" alt="TouchDesigner Network" width="80%">
   <br>
   <em>The TouchDesigner network orchestrating the generative pipeline.</em>
 </div>
 
-The network architecture is divided into three logical blocks:
-
+### The StreamDiffusion Engine
 The system operates as a continuous, feedback-driven loop:
 
 * **Logic & State Control:** The network listens for the `/entropy_level` via OSC to determine the installation's current phase (Genesis, Colonisation, or Saturation). These logic gates drive the parameters of the generative model, ensuring the visuals remain synchronized with the audio and lighting atmosphere.
