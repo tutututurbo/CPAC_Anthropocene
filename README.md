@@ -151,7 +151,7 @@ While the project can be scaled down for smaller demonstrations, this layout rep
 
 The system relies on a distributed architecture to handle real-time generative media.
 
-### Visual System
+### Visual Engine
 * **TouchDesigner:** Handles dynamic environmental rendering, fluid state transitions, and responsive visual morphing.
 * **Stream Diffusion (Remote):** Utilized for high-fidelity generative landscapes. Due to high computational costs, models are run on remote servers.
 * **DayDream:** A lightweight visual framework used for post-processing effects and ambient textures that bridge the gap between generative AI and real-time rendering.
@@ -177,7 +177,6 @@ dependencies:
   cv2
 
   # YOLO ultralytics models
-  yolo11n.pt
   yolov8n-seg.pt
 
   # TouchDesigner
@@ -185,6 +184,24 @@ dependencies:
 ```
 
 ## 📽️ Visual System
+
+The visual core of **Anthropocene** is a real-time generative pipeline built in **TouchDesigner**. It functions as a centralized hub that interprets sensor data and translates it into a visual metamorphosis. The system does not merely play back video; it integrates new frames in real-time based on the audience's live behavior.
+
+<div align="center">
+  <img src="images_readme/touchdesigner.jpeg" alt="TouchDesigner Network" width="100%">
+  <br>
+  <em>The TouchDesigner network orchestrating the generative pipeline.</em>
+</div>
+
+The network architecture is divided into three logical blocks:
+
+The system operates as a continuous, feedback-driven loop:
+
+* **Logic & State Control:** The network listens for the `/entropy_level` via OSC to determine the installation's current phase (Genesis, Colonisation, or Saturation). These logic gates drive the parameters of the generative model, ensuring the visuals remain synchronized with the audio and lighting atmosphere.
+
+* **Live Input & Motion:** To ground the AI generation in physical reality, the system ingests a live camera feed of the audience via **Syphon**. This real-time visual input is blended with pre-rendered video assets to provide **StreamDiffusion** with a sense of movement, spatial dimension, and organic fluctuation.
+
+* **Generative Morphing:** The combined video signal is processed by the **StreamDiffusionTD** component, which acts as the neural rendering engine. Through dynamic **Prompt Interpolation**, the AI re-imagines the scene in real-time—shifting from keywords like *"pristine forest, 4k, organic"* to *"cyberpunk city, destruction, glitch"*—effectively allowing the audience's physical movements to visually corrupt the digital landscape.
 
 ## 🔊 Audio System
 
