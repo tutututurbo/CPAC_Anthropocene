@@ -67,17 +67,17 @@
 ---
 
 ## Table of Contents
-01. 📖 [Overview](#overview)
-02. ✨ [The Experience](#the-experience)
-03. 📁 [Project Structure](#project-structure)  
-04. 🚀 [Installation & Setup](#installation--setup)
-05. 🛠️ [Technology Stack](#technology-stack)
-06. 📽️ [Visual System](#visual-system)
-07. 🔊 [Audio System](#audio-system)
-08. 💡 [Lighting System](#lighting-system)
-09. 🌍 [Credits & Attributions](#credits--attributions)
-10. 📸 [Visual Preview](#visual-preview)  
-11. 📄 [License & Usage Terms](#license--usage-terms)
+01. 📖 [Overview](#-overview)
+02. ✨ [The Experience](#-the-experience)
+03. 📁 [Project Structure](#-project-structure)  
+04. 🚀 [Installation & Setup](#-installation--setup)
+05. 🛠️ [Technology Stack](#-technology-stack)
+06. 📽️ [Visual System](#-visual-system)
+07. 🔊 [Audio System](#-audio-system)
+08. 💡 [Lighting System](#-lighting-system)
+09. 🌍 [Credits & Attributions](#-credits--attributions)
+10. 📸 [Visual Preview](#-visual-preview)  
+11. 📄 [License & Usage Terms](#-license--usage-terms)
 
 ---
 
