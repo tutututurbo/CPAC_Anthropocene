@@ -11,55 +11,48 @@
 ## About Us
 ### Meet Our Team
 
-<table style="width:100%; table-layout:fixed; border-collapse: collapse;">
+<table align="center">
   <tr>
-    <td style="width:25%; vertical-align:top;">
-      <div style="text-align:center;">
-        <img src="images_readme/Matte.jpg" alt="Matteo Di Giovanni" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
-        <h4>Matteo Di Giovanni</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Telecommunication Engineering @POLIMI</p>
-        <p>
-          <a href="mailto:matteo.digiovanni@mail.polimi.it">Mail</a> |
-          <a href="https://github.com/matteodigii" target="_blank">GitHub</a> 
-          <!--a href="" target="_blank">LinkedIn</a>-->
-        </p>
-      </div>
+    <td align="center" valign="top" width="25%">
+      <img src="images_readme/Matte.jpg" width="200" height="200" style="border-radius:50%; object-fit:cover;">
+      <br />
+      <b>Matteo Di Giovanni</b>
+      <p><small>MSc Music & Acoustic @POLIMI<br>BSc Telecommunication @POLIMI</small></p>
+      <p>
+        <a href="mailto:matteo.digiovanni@mail.polimi.it">✉️</a> | 
+        <a href="https://github.com/matteodigii">GitHub</a>
+      </p>
     </td>
-    <td style="width:25%; vertical-align:top;">
-      <div style="text-align:center;">
-        <img src="images_readme/Ale.png" alt="Alessandro Mancuso" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
-        <h4>Alessandro Mancuso</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
-        <p>
-          <a href="mailto:alessandro2.mancuso@mail.polimi.it">Mail</a> |
-          <a href="https://github.com/AleMancusoPOLI" target="_blank">GitHub</a> 
-          <!--a href="" target="_blank">LinkedIn</a>-->
-        </p>
-      </div>
+    <td align="center" valign="top" width="25%">
+      <img src="images_readme/Ale.png" width="200" height="200" style="border-radius:50%; object-fit:cover;">
+      <br />
+      <b>Alessandro Mancuso</b>
+      <p><small>MSc Music & Acoustic @POLIMI<br>BSc Computer Eng @UniBo</small></p>
+      <p>
+        <a href="mailto:alessandro2.mancuso@mail.polimi.it">✉️</a> | 
+        <a href="https://github.com/AleMancusoPOLI">GitHub</a>
+      </p>
     </td>
-    <td style="width:25%; vertical-align:top;">
-      <div style="text-align:center;">
-        <img src="images_readme/Filippo.jpg" alt="Filippo Paris" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
-        <h4>Filippo Paris</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Computer Engineering @UniBo</p>
-        <p>
-          <a href="mailto:filippoparis.pro@gmail.com">Mail</a> |
-          <a href="https://github.com/fparismusic" target="_blank">GitHub</a> |
-          <a href="http://www.linkedin.com/in/filippoparis" target="_blank">LinkedIn</a>
-        </p>
-      </div>
+    <td align="center" valign="top" width="25%">
+      <img src="images_readme/Filippo.jpg" width="200" height="200" style="border-radius:50%; object-fit:cover;">
+      <br />
+      <b>Filippo Paris</b>
+      <p><small>MSc Music & Acoustic @POLIMI<br>BSc Computer Eng @UniBo</small></p>
+      <p>
+        <a href="mailto:filippoparis.pro@gmail.com">✉️</a> | 
+        <a href="https://github.com/fparismusic">GitHub</a> | 
+        <a href="http://www.linkedin.com/in/filippoparis">LinkedIn</a>
+      </p>
     </td>
-    <td style="width:25%; vertical-align:top;">
-      <div style="text-align:center;">
-        <img src="images_readme/RitrattoColori.jpg" alt="Emanuele Turbanti" style="width: 100%; max-width: 200px; height: auto; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
-        <h4>Emanuele Turbanti</h4>
-        <p>MSc in Music & Acoustic Engineering @POLIMI<br>BSc in Electrical Engineering @UniBo</p>
-        <p>
-          <a href="mailto:emanuele.turbanti@mail.polimi.it">Mail</a> |
-          <a href="https://github.com/tutututurbo" target="_blank">GitHub</a> 
-          <!--a href="" target="_blank">LinkedIn</a>-->
-        </p>
-      </div>
+    <td align="center" valign="top" width="25%">
+      <img src="images_readme/RitrattoColori.jpg" width="200" height="200" style="border-radius:50%; object-fit:cover;">
+      <br />
+      <b>Emanuele Turbanti</b>
+      <p><small>MSc Music & Acoustic @POLIMI<br>BSc Electrical Eng @UniBo</small></p>
+      <p>
+        <a href="mailto:emanuele.turbanti@mail.polimi.it">✉️</a> | 
+        <a href="https://github.com/tutututurbo">GitHub</a>
+      </p>
     </td>
   </tr>
 </table>
