@@ -233,23 +233,16 @@ The system manages 6 distinct audio layers, morphing them based on the crowd's a
 The lighting system acts as a physical extension of the digital environment. Controlled via **DMX/Art-net** through the integration of **TouchDesigner** and **QLC+**, a pair of LED fixtures dynamically alters the room's atmosphere based on the system's "Entropy Level".
 
 ### The Chromatic Evolution
-The lighting follows a 6-stage progression, shifting from organic, natural tones to harsh, industrial, and high-stress visual states.
+The lighting follows a 6-stage progression, shifting from organic, natural tones to harsh, industrial states.
 
-| Level | Phase | Light Color 1 | Light Color 2 | Atmospheric Effect |
-| :--- | :--- | :--- | :--- | :--- |
-| **01** | **Genesis** | ![#00FFFF](https://img.shields.io/badge/-Azure-00FFFF?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#00FF00](https://img.shields.io/badge/-Green-00FF00?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Deep forest and pristine water |
-| **02** | **Contact** | ![#FFA500](https://img.shields.io/badge/-Orange-FFA500?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#228B22](https://img.shields.io/badge/-Green-228B22?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Organic warmth with slight interference |
-| **03** | **Colonization** | ![#FFFF00](https://img.shields.io/badge/-Yellow-FFFF00?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#F0F8FF](https://img.shields.io/badge/-Cold%20White-F0F8FF?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Sunlight filtered through concrete/dust |
-| **04** | **Industrial** | ![#4682B4](https://img.shields.io/badge/-Steel%20Blue-4682B4?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#FFFFFF](https://img.shields.io/badge/-Stark%20White-FFFFFF?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Harsh, artificial industrial lighting |
-| **05** | **Cyberpunk** | ![#FF4500](https://img.shields.io/badge/-Amber%2FRed-FF4500?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#8A2BE2](https://img.shields.io/badge/-Electric%20Violet-8A2BE2?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Visual stress and urban overheating |
-| **06** | **Collapse** | ![#FF0000](https://img.shields.io/badge/-Strobe%2FRed-FF0000?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#2F4F4F](https://img.shields.io/badge/-Deep%20Grey-2F4F4F?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Glitch state and total environmental erosion |
+The installation begins with a pristine atmosphere dominated by ![#00FFFF](https://img.shields.io/badge/-Azure-00FFFF?style=flat-square), ![#00FF00](https://img.shields.io/badge/-Green-00FF00?style=flat-square), and ![#7FFFD4](https://img.shields.io/badge/-Aquamarine-7FFFD4?style=flat-square) hues, representing the untouched biosphere and nature. 
 
-### Technical Implementation
-* **Logic:** TouchDesigner maps the global entropy value to specific DMX presets.
-* **Communication:** Data is routed from TouchDesigner to **QLC+** using the **Art-Net** protocol for low-latency fixture response.
-* **Control:** The system is optimized for 2 RGBW fixtures but is designed to be easily scalable by adding more universes/fixtures in the QLC+ workspace.
-* **Smoothing:** A Filter/Lag operator is implemented in the TouchDesigner pipeline to ensure fluid color crossfades between different entropy states.
-  
+As human presence is detected, the environment progressively decays. The palette shifts towards ![#FFA500](https://img.shields.io/badge/-Orange-FFA500?style=flat-square) and ![#FFFF00](https://img.shields.io/badge/-Yellow-FFFF00?style=flat-square), eventually collapsing into the aggressive tones of ![#FF4500](https://img.shields.io/badge/-Red-FF4500?style=flat-square), and a cold, desaturated ![#2F4F4F](https://img.shields.io/badge/-Industrial%20Grey-2F4F4F?style=flat-square).
+
+### Technical Integration
+* **Bridge:** TouchDesigner maps entropy to DMX values sent via **Art-Net/OSC** to QLC+.
+* **Smoothing:** A Filter/Lag operator in TD ensures fluid color crossfades between states.
+
 ## 🌍 Credits & Attributions
 
 This project was conceived and developed as part of the **Creative Programming and Computing** course (A.Y. 2025/2026) at **Politecnico di Milano**.
