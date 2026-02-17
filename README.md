@@ -119,13 +119,17 @@ While the project can be scaled down for smaller demonstrations, this layout rep
 
 ## 🚀 Installation & Setup
 
-### Hardware Requirements
+### Hardware/Software Requirements
 * **Projector:** For immersive visual output.
 * **Camera:** For presence detection (webcam or USB camera).
 * **Speakers:** For spatial audio experience.
+* **Lighting:** 2x DMX-controlled LED Fixtures connected via USB-DMX interface (or Art-net).
 * **Computing Power:**
   * **Internet connection:** Required for remote Stream Diffusion inference.
   * **OR High-end GPU:** (e.g., NVIDIA RTX 3080 or higher) to run the model locally without an internet connection.
+
+Video Bridge:
+* **macOS:** Syphon (Required for Python-to-TD video routing).
 
 ### Running the Project
 1.  **Assets & Media:**
@@ -133,12 +137,16 @@ While the project can be scaled down for smaller demonstrations, this layout rep
     * Place the `Layers` folder in the same directory as the SuperCollider script.
     * Ensure the `Images` (Dataset) folder is placed in the project root for TouchDesigner access.
 2.  **Audio:** Boot the **SuperCollider** server and load the `GranularReceiver.scd` file to start the audio engine.
-3.  **Sensing:** Run the **Python** controller to start the computer vision system:
+3.  **Lighting Setup:**
+    * Open the QLC+ file provided.
+    * Verify the Art-Net/DMX input is receiving signals from TouchDesigner to control the two fixtures.
+4.  **Sensing:** Run the **Python** controller to start the computer vision system:
     ```bash
     pip install ultralytics python-osc
+    # For macOS users, check if Syphon is installed
     python detection_controller.py
     ```
-4.  **Visuals:** Open `Anthropocene.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
+5.  **Visuals:** Open `AnthropoceneCPAC.toe` in **TouchDesigner**. Ensure the OSC in/out ports match the Python configuration.
 
 ## 🛠️ Technology Stack
 
@@ -147,7 +155,7 @@ The system relies on a distributed architecture to handle real-time generative m
 ### Visual Engine
 * **TouchDesigner:** Handles dynamic environmental rendering, fluid state transitions, and responsive visual morphing.
 * **Stream Diffusion (Remote):** Utilized for high-fidelity generative landscapes. Due to high computational costs, models are run on remote servers.
-* **DayDream:** A lightweight visual framework used for post-processing effects and ambient textures that bridge the gap between generative AI and real-time rendering.
+* **DayDream API:** A lightweight visual framework used for post-processing effects and ambient textures that bridge the gap between generative AI and real-time rendering.
 
 ### Audio Engine
 * **SuperCollider:** Generates adaptive soundscapes using procedural sound design and granular synthesis.
@@ -157,7 +165,8 @@ The system relies on a distributed architecture to handle real-time generative m
 * **YOLO (Ultralytics):** Camera-based presence detection and multi-participant tracking.
 * **Python:** A communication pipeline that normalizes tracking data and controls system parameters in real-time.
 * **OSC:** The low-latency network protocol used to synchronize data between Python, SuperCollider, and TouchDesigner.
-* **DMX:** Controls the physical lighting environment.
+* **DMX/Art-net:** Controls the physical lighting environment.
+* **QLC+:** For DMX lighting management and bridge to TouchDesigner.
 
 ### Key Packages
 ```yaml
@@ -221,8 +230,26 @@ The system manages 6 distinct audio layers, morphing them based on the crowd's a
 
 ## 💡 Lighting System
 
-The TouchDesigner project includes a system for automatic lighting management. The installation is thought for 2 fixtures, but can be easily 
+The lighting system acts as a physical extension of the digital environment. Controlled via **DMX/Art-net** through the integration of **TouchDesigner** and **QLC+**, a pair of LED fixtures dynamically alters the room's atmosphere based on the system's "Entropy Level".
 
+### The Chromatic Evolution
+The lighting follows a 6-stage progression, shifting from organic, natural tones to harsh, industrial, and high-stress visual states.
+
+| Level | Phase | Light Color 1 | Light Color 2 | Atmospheric Effect |
+| :--- | :--- | :--- | :--- | :--- |
+| **01** | **Genesis** | ![#00FFFF](https://img.shields.io/badge/-Azure-00FFFF?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#00FF00](https://img.shields.io/badge/-Green-00FF00?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Deep forest and pristine water |
+| **02** | **Contact** | ![#FFA500](https://img.shields.io/badge/-Orange-FFA500?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#228B22](https://img.shields.io/badge/-Green-228B22?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Organic warmth with slight interference |
+| **03** | **Colonization** | ![#FFFF00](https://img.shields.io/badge/-Yellow-FFFF00?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#F0F8FF](https://img.shields.io/badge/-Cold%20White-F0F8FF?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Sunlight filtered through concrete/dust |
+| **04** | **Industrial** | ![#4682B4](https://img.shields.io/badge/-Steel%20Blue-4682B4?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#FFFFFF](https://img.shields.io/badge/-Stark%20White-FFFFFF?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Harsh, artificial industrial lighting |
+| **05** | **Cyberpunk** | ![#FF4500](https://img.shields.io/badge/-Amber%2FRed-FF4500?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#8A2BE2](https://img.shields.io/badge/-Electric%20Violet-8A2BE2?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Visual stress and urban overheating |
+| **06** | **Collapse** | ![#FF0000](https://img.shields.io/badge/-Strobe%2FRed-FF0000?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | ![#2F4F4F](https://img.shields.io/badge/-Deep%20Grey-2F4F4F?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAwAB/alt7QAAAABJRU5ErkJggg==) | Glitch state and total environmental erosion |
+
+### Technical Implementation
+* **Logic:** TouchDesigner maps the global entropy value to specific DMX presets.
+* **Communication:** Data is routed from TouchDesigner to **QLC+** using the **Art-Net** protocol for low-latency fixture response.
+* **Control:** The system is optimized for 2 RGBW fixtures but is designed to be easily scalable by adding more universes/fixtures in the QLC+ workspace.
+* **Smoothing:** A Filter/Lag operator is implemented in the TouchDesigner pipeline to ensure fluid color crossfades between different entropy states.
+  
 ## 🌍 Credits & Attributions
 
 This project was conceived and developed as part of the **Creative Programming and Computing** course (A.Y. 2025/2026) at **Politecnico di Milano**.
@@ -237,6 +264,10 @@ This project was conceived and developed as part of the **Creative Programming a
 * Models hosted and accelerated via **HuggingFace**.
   
 ## 📸 Visual Preview
+
+| 2 people, primitive forest        | While testing our experience...           | Cyberpunk city                           |
+|-----------------------------------|-------------------------------------------|------------------------------------------|
+| ![Foto1](images_readme/foto1.png) | ![Foto2](images_readme/foto2.jpeg)        | ![Foto3](images_readme/foto3.jpeg)       |
 
 ---
 
