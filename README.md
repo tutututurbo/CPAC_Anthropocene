@@ -265,9 +265,9 @@ This project was conceived and developed as part of the **Creative Programming a
   
 ## 📸 Visual Preview
 
-| 2 people, primitive forest        | While testing our experience...           | Cyberpunk city                           |
+| Cyberpunk city                    | While testing our experience...           | Lighting setup                           |
 |-----------------------------------|-------------------------------------------|------------------------------------------|
-| ![Foto1](images_readme/foto1.png) | ![Foto2](images_readme/foto2.jpeg)        | ![Foto3](images_readme/foto3.jpeg)       |
+| ![Foto1](images_readme/foto1.jpeg)| ![Foto2](images_readme/foto2.jpeg)        | ![Foto3](images_readme/foto3.jpeg)       |
 
 ---
 
