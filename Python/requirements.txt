@@ -1,0 +1,7 @@
+ultralytics
+python-osc
+opencv-python
+numpy
+# macOS only: Syphon video bridge (Python -> TouchDesigner)
+syphon-python; sys_platform == "darwin"
+pyobjc-framework-Metal; sys_platform == "darwin"

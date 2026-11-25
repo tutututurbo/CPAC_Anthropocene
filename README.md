@@ -131,7 +131,17 @@ While the project can be scaled down for smaller demonstrations, this layout rep
 Video Bridge:
 * **macOS:** Syphon (Required for Python-to-TD video routing).
 
-### Running the Project
+### Quick Start (one command)
+`launch.py` in the project root starts everything in order (SuperCollider → QLC+ → TouchDesigner → Python detection) and stops it with Ctrl+C:
+```bash
+python3 launch.py --setup   # first time: creates .venv with the Python dependencies
+python3 launch.py --check   # verify apps, files and dependencies
+python3 launch.py           # launch the installation
+python3 launch.py --skip qlc --ip 192.168.1.20   # e.g. no lights, OSC to another machine
+```
+Run `python3 launch.py --help` for all options (custom `.toe`, app paths, `--sc-ide`, `--close-apps`...).
+
+### Running the Project (manual)
 1.  **Assets & Media:**
     * Download the image dataset and the audio samples.
     * Place the `Layers` folder in the same directory as the SuperCollider script.
